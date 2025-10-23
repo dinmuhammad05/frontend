@@ -257,16 +257,112 @@ body {
     }
 }
 
-.story__block {
-    background: #004047;
+.story {
+    background-color: #004047;
+    padding: 64px 0;
+    background-image: url("../images/manage-bg.svg");
+    background-repeat: no-repeat;
+    background-position: right top;
+
+    &__title {
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 100%;
+        color: #fff;
+        width: 327px;
+        margin-bottom: 56px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 48px;
+    }
+
+    &__item {
+        text-align: center;
+        max-width: 327px;
+    }
+
+    &__img {
+        margin-top: 16px;
+    }
+
+    &__text {
+        color: #fff;
+        font-size: 15px;
+        line-height: 156%;
+        margin-bottom: 8px;
+    }
+
+    &__staff_name {
+        font-weight: 700;
+        font-size: 18px;
+        color: #f67e7e;
+        margin-bottom: 4px;
+    }
+
+    &__staff_position {
+        color: #fff;
+        font-size: 14px;
+    }
 }
 
-.story__title {
-    width: 327px;
-    text-align: center;
-    color: #fff;
+/* Tablet */
+@media screen and (min-width: 768px) {
+    .story__title {
+        margin-bottom: 64px;
+        font-size: 32px;
+        width: 445px;
+        span {
+            color: #f67e7e;
+        }
+    }
 
-    span {
-        color: #79c8c7;
+    .story__item {
+        width: 573px;
+    }
+}
+
+/* Desktop */
+@media screen and (min-width: 1200px) {
+    .story {
+        background-position: right bottom;
+        padding: 140px 0;
+    }
+
+    .story__block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .story__list {
+        flex-direction: row;
+        justify-content: center;
+        align-items: start;
+        gap: 30px;
+        max-width: 1100px;
+    }
+
+    .story__item {
+        text-align: start;
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .story__title {
+        font-size: 48px;
+        line-height: 100%;
+        width: 445px;
+        text-align: center;
+        margin-bottom: 80px;
+        span {
+            color: #f67e7e;
+        }
     }
 }

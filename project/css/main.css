@@ -269,4 +269,121 @@ body {
     font-size: 48px;
     line-height: 100%;
   }
+}
+.story {
+  background-color: #004047;
+  padding: 64px 0;
+  background-image: url("../images/manage-bg.svg");
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+.story__title {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 100%;
+  color: #fff;
+  width: 327px;
+  margin-bottom: 56px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.story__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 48px;
+}
+.story__item {
+  text-align: center;
+  max-width: 327px;
+}
+.story__img {
+  margin-top: 16px;
+}
+.story__text {
+  color: #fff;
+  font-size: 15px;
+  line-height: 156%;
+  margin-bottom: 8px;
+}
+.story__staff_name {
+  font-weight: 700;
+  font-size: 18px;
+  color: #f67e7e;
+  margin-bottom: 4px;
+}
+.story__staff_position {
+  color: #fff;
+  font-size: 14px;
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) {
+  .story__title {
+    margin-bottom: 64px;
+    font-size: 32px;
+    width: 445px;
+  }
+  .story__title span {
+    color: #f67e7e;
+  }
+  .story__item {
+    width: 573px;
+  }
+}
+/* Desktop */
+@media screen and (min-width: 1200px) {
+  .story {
+    background-position: right bottom;
+    padding: 140px 0;
+  }
+  .story__block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .story__list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+    gap: 30px;
+    max-width: 1100px;
+  }
+  .story__item {
+    text-align: start;
+    width: 100%;
+    max-width: 350px;
+  }
+  .story__title {
+    font-size: 48px;
+    line-height: 100%;
+    width: 445px;
+    text-align: center;
+    margin-bottom: 80px;
+  }
+  .story__title span {
+    color: #f67e7e;
+  }
 }/*# sourceMappingURL=main.css.map */
