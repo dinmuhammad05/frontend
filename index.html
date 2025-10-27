@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>📚 Kitoblar Ro'yxati (Oddiy CRUD)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>📚 Kitoblar Ro'yxati</h1>
+
+    <form id="bookForm">
+      <input type="text" id="bookTitle" placeholder="Kitob nomi" required>
+      <input type="text" id="bookAuthor" placeholder="Muallif" required>
+      <button type="submit" id="addBtn">➕ Qo'shish</button>
+      <button type="button" id="cancelBtn" style="display:none;">Bekor qilish</button>
+    </form>
+
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Kitob nomi</th>
+          <th>Muallif</th>
+          <th>Amallar</th>
+        </tr>
+      </thead>
+      <tbody id="bookList">
+      </tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
