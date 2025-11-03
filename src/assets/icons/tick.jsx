@@ -1,0 +1,21 @@
+import React from 'react'
+
+export const Tick = () => {
+    return (
+        <div>
+            <span>
+                <svg width={48} height={49} viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width={48} height="48.0485" rx="11.1481" fill="#EEF4FF" />
+                    <g clipPath="url(#clip0_1005_5886)">
+                        <path d="M23.574 11.9565L33.574 16.3606V23.9408C33.574 27.7552 30.2407 31.4348 23.574 34.9798C16.9074 31.4348 13.574 27.7552 13.574 23.9408V16.3606L23.574 11.9565ZM25.8669 20.2675L22.574 23.5296L21.2811 22.2493L19.8669 23.6506L22.574 26.3331L27.2811 21.6688L25.8669 20.2675Z" fill="#3F51B5" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_1005_5886">
+                            <rect width={24} height="24.0243" fill="white" transform="translate(11.574 11.9565)" />
+                        </clipPath>
+                    </defs>
+                </svg>
+            </span>
+        </div>
+    )
+}
