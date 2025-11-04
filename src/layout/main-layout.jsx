@@ -5,9 +5,9 @@ import { Outlet } from 'react-router-dom'
 export const MainLayout = () => {
     return (
         <>
-            <div className="">
+            <div className=" dark:bg-[#364e9c] ">
                 <Header />
-                <main>
+                <main className=''>
                     <Outlet />
                 </main>
                 <Footer />

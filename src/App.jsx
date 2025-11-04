@@ -6,9 +6,9 @@ import { NewBookDetail } from "./pages/pruduct-detail/new-book-detail.jsx";
 import { MostReadDetail } from "./pages/pruduct-detail/most-read-book.jsx";
 import { Profile } from "./pages/profile/profile.jsx";
 import Obuna from "./pages/profile/components/obuna.jsx";
-import Hisob  from "./pages/profile/components/hisob.jsx";
-import  Kitoblarim from "./pages/profile/components/kitoblarim.jsx";
-import Saqlanganlar  from "./pages/profile/components/saqlanganlar.jsx";
+import Hisob from "./pages/profile/components/hisob.jsx";
+import Kitoblarim from "./pages/profile/components/kitoblarim.jsx";
+import Saqlanganlar from "./pages/profile/components/saqlanganlar.jsx";
 
 function App() {
     return (

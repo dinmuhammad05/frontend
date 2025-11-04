@@ -12,7 +12,7 @@ import { Youtube } from "../../assets/icons/social/youtube"
 export const Footer = () => {
     return (
         <>
-            <div className="bg-primary_soft">
+            <div className="bg-primary_soft  dark:bg-[#364e9c] dark:text-white">
                 <div className="container h-70 flex gap-36">
                     <div className="flex flex-col gap-4 mt-8 ml-19">
                         <h3 className="font-bold text-[19px]">Платформа хақида</h3>
