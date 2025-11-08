@@ -56,7 +56,7 @@ export const Home = () => {
                         </p>
                     </div>
 
-                    <ul className="flex justify-between gap-3.5 pt-[30px] text-[#000000] m-[15px] tablet:gap-4 tablet:max-w-[476px] mx-auto">
+                    <ul className="flex justify-between gap-3.5 pt-[30px] text-[#000000] m-[15px] max-w-[328px] tablet:gap-4 tablet:max-w-[476px] mx-auto">
                         <FilterButton
                             label="Compact"
                             onClick={() => handleFilterClick("Compact")}
