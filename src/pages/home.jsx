@@ -12,11 +12,11 @@ export const Home = () => {
         setActiveFilter(filterName);
     };
     return (
-        <main>
-            <div className="container">
+        <main className="dark:bg-[#1C1C1C] dark:text-white pt-5">
+            <div className="container ">
                 {/* section 1 */}
                 <div
-                    className="w-[358px] h-[300px] mx-auto rounded-[20px] bg-cover bg-center mt-5 text-center relative tablet:w-[794px] tablet:h-[500px] tablet:rounded-[20px] desktop:w-[1200px] "
+                    className="w-[358px] h-[300px] mx-auto rounded-[20px] bg-cover bg-center  text-center relative tablet:w-[794px] tablet:h-[500px] tablet:rounded-[20px] desktop:w-[1200px]"
                     style={{ backgroundImage: `url(${malibuImg})` }}
                 >
                     <div className="text-center pt-10">
@@ -24,7 +24,7 @@ export const Home = () => {
                             <h2 className="text-2xl font-bold text-white tablet:text-4xl">
                                 Compact cars
                             </h2>
-                            <p className="text-white text-sm pt-1.5 tablet:text-base tablet:font-normal">
+                            <p className="text-white text-sm pt-1.5 tablet:text-base">
                                 Rent cars as you are comfortable and where you
                                 are comfortable.
                             </p>
@@ -33,10 +33,10 @@ export const Home = () => {
 
                     <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 shadow-[0_4px_10px_rgba(0,0,0,0.15)] rounded-[100px] overflow-hidden">
                         <button className="bg-white w-[350px] h-[60px] flex items-center justify-between pl-5 pr-1 tablet:w-[600px] tablet:h-[66px]">
-                            <p className="text-[#6A6A6A] ">
+                            <p className="text-[#6A6A6A]">
                                 Find the car of your dreams
                             </p>
-                            <div className="w-14 h-14 bg-[#299764] rounded-full flex items-center justify-center ">
+                            <div className="w-14 h-14 bg-[#299764] rounded-full flex items-center justify-center">
                                 <SearchIcon className="text-white" />
                             </div>
                         </button>
@@ -45,18 +45,18 @@ export const Home = () => {
 
                 {/* section 2 */}
                 <div>
-                    <div className="text-center text-black  pt-[67px] desktop:pt-[87px] desktop:max-w-[575px] mx-auto">
-                        <h2 className="font-semibold text-4xl">
+                    <div className="text-center pt-[67px] desktop:pt-[87px] desktop:max-w-[575px] mx-auto">
+                        <h2 className="font-semibold text-4xl text-black dark:text-white">
                             Choose the car of your dreams
                         </h2>
-                        <p className="text-base font-normal pt-2.5 text-[#606060]">
+                        <p className="text-base font-normal pt-2.5 text-[#606060] dark:text-gray-300">
                             We provide our customers with the most incredible
                             driving emotions. That is why there are only
                             world-class cars in our fleet
                         </p>
                     </div>
 
-                    <ul className="flex justify-between gap-3.5 pt-[30px] text-[#000000] m-[15px] max-w-[328px] tablet:gap-4 tablet:max-w-[476px] mx-auto">
+                    <ul className="flex justify-between gap-3.5 pt-[30px] m-[15px] max-w-[328px] tablet:gap-4 tablet:max-w-[476px] mx-auto text-black dark:text-white">
                         <FilterButton
                             label="Compact"
                             onClick={() => handleFilterClick("Compact")}
@@ -88,20 +88,20 @@ export const Home = () => {
                 </div>
 
                 {/* section 3 */}
-                <div className="tablet:grid tablet:grid-cols-2 tablet:gap-5 desktop:grid-cols-3">
+                <div className="tablet:grid tablet:grid-cols-2 tablet:gap-5 desktop:grid-cols-3 dark:bg-[#1C1C1C] dark:text-white">
                     {cars.map((car) => (
-                        <Cars key={car.id} bgColor={"#F5F5F5"} {...car} />
+                        <Cars key={car.id} {...car} />
                     ))}
                 </div>
 
                 <div className="flex justify-center pt-[30px] desktop:pt-10">
                     <FilterButton
-                            label="Compact"
-                            mobileWidth="w-[173px]"
-                            mobileHeight="h-[58px]"
-                            tabletWidth="tablet:w-[173px]"
-                            tabletHeight="tablet:h-[58px]"
-                        />
+                        label="View all cars"
+                        mobileWidth="w-[173px]"
+                        mobileHeight="h-[58px]"
+                        tabletWidth="tablet:w-[173px]"
+                        tabletHeight="tablet:h-[58px]"
+                    />
                 </div>
             </div>
         </main>

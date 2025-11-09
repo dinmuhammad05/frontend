@@ -22,6 +22,7 @@ export const FilterButton = ({
                 border border-gray-300 rounded-[100px] font-semibold 
                 flex items-center justify-center text-sm
                 transition-all duration-300
+                cursor-grab
                 
                 ${mobileWidth} ${mobileHeight}
                 ${tabletWidth} ${tabletHeight}
@@ -40,4 +41,5 @@ export const FilterButton = ({
             {label}
         </button>
     );
+
 };

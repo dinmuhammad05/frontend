@@ -10,7 +10,7 @@ export const EngineIcon = () => {
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
             >
-                <path
+                <path className="dark:fill-white"
                     d="M15 11.5499C15 14.4909 12.6215 16.875 9.6875 16.875C6.75349 16.875 4.375 14.4909 4.375 11.5499C4.375 8.60897 9.6875 3.125 9.6875 3.125C9.6875 3.125 15 8.60897 15 11.5499Z"
                     fill="black"
                 />
