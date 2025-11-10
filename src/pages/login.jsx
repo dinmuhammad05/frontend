@@ -120,9 +120,7 @@ export const Login = () => {
                     </button>
                 </div>
 
-                <p className="text-center text-slate-500 text-xs mt-6">
-                    Xavfli tarzda saqlangan
-                </p>
+                
             </form>
         </div>
     );
