@@ -6,11 +6,14 @@ import TruckIcon from "../assets/svg/truck-icon.svg";
 import callIcon from "../assets/svg/call-icon.svg"
 import cartIcon from "../assets/svg/cart-icon.svg"
 import boxIcon from "../assets/svg/box-icon.svg"
+import { PopularCatigories } from "../components/popular-categories";
+import { PopularProduct } from "../components/popular-product";
+import { ThreePictures } from "../components/three-pictrues";
 
 
 const Home = () => {
   return (
-    <main className="bg-[#00B207]">
+    <main className="bg-white">
 
       {/* Banner Section */}
       <div className="flex justify-center items-center h-full gap-6 pt-6 pb-6">
@@ -24,7 +27,7 @@ const Home = () => {
 
       </div>
 
-      <div className="container bg-white h-32 rounded-[10px]">
+      <div className="container pl-10 pr-10 bg-white h-32 rounded-[10px]">
 
         <ul className="flex justify-between items-center py-10  ">
 
@@ -68,12 +71,26 @@ const Home = () => {
             <div className="ml-4">
               <p className="mb-2 font-semibold">Money-Back Guarantee</p>
               <p>30 Days Money-Back Guarantee</p>
-              
+
             </div>
           </li>
 
         </ul>
 
+      </div>
+
+      <div className=" container pt-5">
+        <h2 className="text-3xl font-extrabold mt-15 mb-8 ">Popular Categories</h2>
+        <PopularCatigories />
+      </div>
+
+      <div className=" container pt-5">
+        <h2 className="text-3xl font-extrabold mt-15 mb-8 ">Popular Product</h2>
+        <PopularProduct />
+      </div>
+
+      <div>
+        <ThreePictures />
       </div>
 
     </main>

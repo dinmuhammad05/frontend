@@ -25,3 +25,4 @@ function yulduzcha2(n) {
 console.log(yulduzcha(5));
 
 console.log(yulduzcha2(5))
+
