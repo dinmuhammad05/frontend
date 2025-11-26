@@ -1,25 +1,26 @@
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import {  Routes, Route } from 'react-router-dom';
 import Layout from './layout/main-layout';
-import { LoginForm } from './pages/login/login';
-import { Home } from './pages/home/home';
 import NotFound from './pages/not-found';
-
-const queryClient = new QueryClient();
+import { LoginForm } from './pages/auth/login';
+import adminRoustes from './router/admin-roustes';
+import { Statistic } from './pages/statistic/statistic';
 
 function App() {
   return (
-    <QueryClientProvider client={queryClient}>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<LoginForm />} />
-          <Route path="/app" element={<Layout />}>
-            <Route index element={<Home />} />
-            <Route path="*" element={<NotFound />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
-    </QueryClientProvider>
+    <Routes>
+      <Route path="/" element={<LoginForm />} />
+      <Route path="/app" element={<Layout />}>
+        <Route path="admin">
+          <Route index element={<Statistic />} />
+          {adminRoustes.map(({ page: Page, path }) => (
+            <Route key={path} path={path} element={<Page />} />
+          ))}
+        </Route>
+
+        <Route path="teacher"></Route>
+      </Route>
+      <Route path="*" element={<NotFound />} />
+    </Routes>
   );
 }
 

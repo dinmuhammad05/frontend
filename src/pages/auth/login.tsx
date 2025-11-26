@@ -1,8 +1,5 @@
 import type React from 'react';
 import { useState } from 'react';
-import { useMutation } from '@tanstack/react-query';
-import { useNavigate, Navigate } from 'react-router-dom';
-import { api, type IResponse } from '@/config';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -21,43 +18,21 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import { Loader2, Eye, EyeOff } from 'lucide-react';
-import type { IAuthData } from './login-type';
 import cookie from 'js-cookie';
-
-interface LoginData {
-  username: string;
-  password: string;
-  role: 'Admin' | 'Teacher';
-}
+import { useLoginMutation } from './service/useLogin';
+import { Navigate } from 'react-router-dom';
 
 export function LoginForm() {
+  const loginMutation = useLoginMutation();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [role, setRole] = useState<'Admin' | 'Teacher' | ''>('');
   const [showPassword, setShowPassword] = useState(false);
-  const navigate = useNavigate();
-
-  // Agar token bo'lsa, app pagega yo'naltirish
   const token = cookie.get('token');
+
   if (token) {
     return <Navigate to="/app" replace />;
   }
-
-  const loginMutation = useMutation({
-    mutationFn: async (data: LoginData) => {
-      const response = await api.post('/api/v1/auth/signin', data);
-      return response.data;
-    },
-    onSuccess: (data) => {
-      console.log('Login successful:', data);
-      const userRes: IResponse<IAuthData> = data;
-      cookie.set('token', userRes.data.token);
-      navigate('/app', { replace: true });
-    },
-    onError: (error) => {
-      console.error('Login failed:', error);
-    },
-  });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();

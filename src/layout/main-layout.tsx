@@ -1,6 +1,6 @@
 // layout/main-layout.tsx
 import { SidebarProvider, SidebarTrigger } from '@/components/ui/sidebar';
-import { AppSidebar } from '@/components/app-sidebar';
+import { AppSidebar } from '@/layout/app-sidebar';
 import { Outlet, Navigate } from 'react-router-dom';
 import cookie from 'js-cookie';
 
